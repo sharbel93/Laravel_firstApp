@@ -50,3 +50,7 @@ Route::post('/submit', function (Request $request) {
    $link = tap(new App\Link($data))->save();
    return redirect('/');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
